@@ -20,17 +20,19 @@
         <!---->
     </head>
     <!--CUERPO-->
-    <body>
+    <body >
         <div class="container row" style="margin-bottom:1em;">
          <!--NOMBRE DE MANTENIMIENTO-->   
         <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i> Mantenimiento del Paciente</h3>
         <hr>
             <div class="text-right">
+                <!--NEW PATIENT-->
                 <div class="" style="display:inline-block;">
                     <p>
                         <a class="btn btn-success" href=""><i class="glyphicon glyphicon-plus"></i> Nueva Paciente</a>
                     </p>
                 </div>
+                <!--TO EXPORT-->
                 <div class="btn-group" style="display:inline-block;">
                     <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i> Exportar en...</button>
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,96 +48,134 @@
             </div>
         </div>
 
-    <div class="table table-responsive">
-        <table id="tbl-marca" class="table table-condensed table-bordered table-hover">
-                <thead class="thead-abcm" style="color:#ffffff;background:#0094ff;">
-                    <tr>
-                        <th>
-                            Nombres
-                        </th>
-                        <th>
-                            Ape. Paterno
-                        </th>
-                        <th>
-                            Ape. Materno
-                        </th>
-                        <th>
-                            Dni
-                        </th>
-                        <th>
-                            Estado
-                        </th>
-                        <th>
-                            Acciones
-                        </th>
-                    </tr>
-                </thead>
+        <!--MAINTENANCE TABLE-->
+        <div class="table table-responsive">
 
-                <tbody>
+            <table id="tbl-marca" class="table table-condensed table-bordered table-hover">
+                    <!--TABLE HEAD-->
+                    <thead class="thead-abcm" style="color:#ffffff;background:#0094ff;">
                         <tr>
-                            <td>
-                                Roy Brayan
-                            </td>
-                            <td>
-                                felix
-                            </td>
-                            <td>
-                                Trinidad
-                            </td>
-                            <td>
-                                71842016
-                            </td>
-                            <td>
-                                <b class="text-success"><span>•</span> Activo</b>
-                            </td>
-                            <td>
-                                <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
-                            </td>
+                            <th>
+                                Nombres
+                            </th>
+                            <th>
+                                Ape. Paterno
+                            </th>
+                            <th>
+                                Ape. Materno
+                            </th>
+                            <th>
+                                Dni
+                            </th>
+                            <th>
+                                Estado
+                            </th>
+                            <th>
+                                Acciones
+                            </th>
                         </tr>
-                        <tr>
-                            <td>
-                                Franco
-                            </td>
-                            <td>
-                                Cruz
-                            </td>
-                            <td>
-                                Villanueva
-                            </td>
-                            <td>
-                                71634532
-                            </td>
-                            <td>
-                                <b class="text-danger">• Desactivado</b>
-                            </td>
-                            <td>
-                                <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Mariel
-                            </td>
-                            <td>
-                                Veramendi
-                            </td>
-                            <td>
-                                Padilla
-                            </td>
-                            <td>
-                                71842016
-                            </td>
-                            <td>
-                                <b class="text-success"><span>•</span> Activo</b>
-                            </td>
-                            <td>
-                                <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
+                    </thead>
+                    <!--TABLE BODY-->
+                    <tbody>
+                            <tr>
+                                <td>
+                                    Roy Brayan
+                                </td>
+                                <td>
+                                    felix
+                                </td>
+                                <td>
+                                    Trinidad
+                                </td>
+                                <td>
+                                    71842016
+                                </td>
+                                <td>
+                                    <b class="text-success"><span>•</span> Activo</b>
+                                </td>
+                                <td>
+                                    <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Franco
+                                </td>
+                                <td>
+                                    Cruz
+                                </td>
+                                <td>
+                                    Villanueva
+                                </td>
+                                <td>
+                                    71634532
+                                </td>
+                                <td>
+                                    <b class="text-danger">• Desactivado</b>
+                                </td>
+                                <td>
+                                    <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Mariel
+                                </td>
+                                <td>
+                                    Veramendi
+                                </td>
+                                <td>
+                                    Padilla
+                                </td>
+                                <td>
+                                    71842016
+                                </td>
+                                <td>
+                                    <b class="text-success"><span>•</span> Activo</b>
+                                </td>
+                                <td>
+                                    <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
+
+        <script>
+
+    $(document).ready(function () 
+    {
+        $('#tbl-marca').dataTable({
+            language: {
+                processing: "En curso...",
+                search: "Buscar:",
+                lengthMenu: "Visualizar _MENU_ registros",
+                info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                infoEmpty: "0 registros encontrados",
+                infoFiltered: "(_MAX_ registros filtrados en total)",
+                infoPostFix: "",
+                loadingRecords: "Cargando registros...",
+                zeroRecords: "No hay registros",
+                emptyTable: "Vacío",
+                paginate: {
+                    first: "Primero",
+                    previous: "Previo",
+                    next: "Siguiente",
+                    last: "Último"
+                },
+                aria: {
+                    sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                    sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+            }
+        });
+    });
+</script>
+
+
+        </script>
 </body>
+
+
 </html>
