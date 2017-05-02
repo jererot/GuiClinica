@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--CABECERA-->
     <head>
-        <title>Index</title>
+        <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--LINKS-->
-        <link href="../../css/site/Site.css" rel="stylesheet">
-        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="../../css/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/jquery.validate.min.js"></script>
-        <script src="../../js/jquery.validate.unobtrusive.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/DataTables/jquery.dataTables.min.js"></script>
-        <script src="../../js/DataTables/dataTables.scroller.min.js"></script>
-        <script src="../../js/DataTables/dataTables.bootstrap.min.js"></script>
+
         
+        <!--link href="../../css/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" /-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/DataTables/jquery.dataTables.min.js"></script>
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
         <style>
             .borde1{border: 1px #000 solid; text-align: center}            
             .borde{border: 1px #295ba7 solid; text-align: center}
@@ -24,15 +20,11 @@
             .color2{background: #fcc314;}
             .color3{background: #94ac3c;}
             .color4{background: #295ba7;}
-            .imagen{border:2px; color: #295ba7; height: 200px; margin: 2%; text-align: }
         </style>
-        </head>
-
-        <!---->
     </head>
     <!--CUERPO-->
-    <body >
-        <!--CONTAINER TITLE-->
+    <body>
+    <!--CONTAINER TITLE-->
         <div class="container" id="MantenimientoPaciente">
          <!--NOMBRE DE MANTENIMIENTO-->   
                 <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i> Mantenimiento del Paciente</h3>
@@ -82,14 +74,15 @@
             </div>
         </div>
 
-        
-        <div class="container" >
+    <!--TABLE-->
+    <div class="container" >
             <!--MAINTENANCE TABLE-->
-            <div class="table table-responsive" style="text-align: center; align-content: center;"  >
+            <br/>
+            <div class="table table-responsive" >
 
-                <table id="tbl-marca" class="table table-condensed table-bordered table-hover">
+                <table id="tbl-paciente" class="table table-bordered table-striped table-hover">
                         <!--TABLE HEAD-->
-                        <thead class="thead-abcm" style="color:#ffffff;background:#0094ff;">
+                        <thead style="color:#ffffff;background:#0094ff;">
                             <tr >
                                 <th>
                                     Nombres
@@ -101,6 +94,9 @@
                                     Ape. Materno
                                 </th>
                                 <th>
+                                    Tipo Documento
+                                </th>
+                                <th>
                                     Dni
                                 </th>
                                 <th>
@@ -109,6 +105,7 @@
                                 <th>
                                     Acciones
                                 </th>
+                                
                             </tr>
                         </thead>
                         <!--TABLE BODY-->
@@ -124,44 +121,7 @@
                                         Trinidad
                                     </td>
                                     <td>
-                                        71842016
-                                    </td>
-                                    <td>
-                                        <b class="text-success"><span>•</span> Activo</b>
-                                    </td>
-                                    <td>
-                                        <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Franco
-                                    </td>
-                                    <td>
-                                        Cruz
-                                    </td>
-                                    <td>
-                                        Villanueva
-                                    </td>
-                                    <td>
-                                        71634532
-                                    </td>
-                                    <td>
-                                        <b class="text-danger">• Desactivado</b>
-                                    </td>
-                                    <td>
-                                        <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mariel
-                                    </td>
-                                    <td>
-                                        Veramendi
-                                    </td>
-                                    <td>
-                                        Padilla
+                                        DNI
                                     </td>
                                     <td>
                                         71842016
@@ -170,63 +130,397 @@
                                         <b class="text-success"><span>•</span> Activo</b>
                                     </td>
                                     <td>
-                                        <a id="deleteItem" class="deleteItem btn-modal" data-target="#modalDelete" data-toggle="modal" data-content="@item.txt_desc" data-id="@item.id_marca">Eliminar</a>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        <b class="text-success"><span>•</span> Activo</b>
+                                    </td>
+                                    <td>
+                                        <a href="index.html"><strong>Editar</strong> </a>
+                                        <a href="index.html"><strong>Detalle</strong> </a>
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
                                     </td>
                                 </tr>
                         </tbody>
                     </table>
-                </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
         <script>
-                $(document).ready(function () 
-                {
-                    $('#tbl-marca').dataTable({
-                        language: {
-                            processing: "En curso...",
-                            search: "Buscar:",
-                            lengthMenu: "Visualizar _MENU_ registros",
-                            info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
-                            infoEmpty: "0 registros encontrados",
-                            infoFiltered: "(_MAX_ registros filtrados en total)",
-                            infoPostFix: "",
-                            loadingRecords: "Cargando registros...",
-                            zeroRecords: "No hay registros",
-                            emptyTable: "Vacío",
-                            paginate: {
-                                first: "Primero",
-                                previous: "Previo",
-                                next: "Siguiente",
-                                last: "Último"
-                            },
-                            aria: {
-                                sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
-                                sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
-                        }
-                    });
+
+            $(document).ready(function () 
+            {
+                $('#tbl-paciente').dataTable({
+                    "aoColumns": [
+                            { "sName": "Nombre", "mData": "Nombre" },
+                            { "sName": "Ape. Paterno", "mData": "Ape. Paterno" },
+                            { "sName": "Ape. Materno", "mData": "Ape. Materno" },
+                            { "sName": "Tipo Documento", "mData": "Tipo Documento" },
+                            { "sName": "Dni", "mData": "Dni" },
+                            { "sName": "Estado", "mData": "Estado" },
+                            { "sName": "Acciones", "mData": "Acciones" }
+                    ],
+
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo",
+                            next: "Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+                    }
                 });
-            </script>
 
-</body>
+                var id;
+                $("body").on("click", ".deleteItem", function (e) {
+                    id = $(this).data('id');
+
+                    var html = "¿Estás seguro de eliminar la marca de <b>" + $(this).data('content') + "</b>?";
+                    $("#body-delete").html(html);
+                });
+
+                $('#btnContinueDelete').click(function () {
+                    window.location = "/Marca/Delete/" + id;
+                });
 
 
+            });
+
+        </script>
+
+
+    </body>
 </html>
