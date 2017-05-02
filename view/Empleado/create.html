@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--CABECERA-->
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--LINKS-->
+        <link href="../../css/site/site.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            .borde1{border: 1px #000 solid; text-align: center}            
+            .borde{border: 1px #295ba7 solid; text-align: center}
+            .color1{background: #eeeeee;}
+            .color2{background: #fcc314;}
+            .color3{background: #94ac3c;}
+            .color4{background: #295ba7;}
+            .imagen{border:2px; color: #295ba7; height: 200px; margin: 2%;}
+            .combo{margin-left: 15px;}
+        </style>
+    </head>
+
+    
+    <body>
+        <!--CONTAINER TITLE-->
+        <div class="container ">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!--BREADCRUMB-->            
+                <ul class="breadcrumb col-sm-12 col-md-12">
+                    <li><a href="index.html">Lista Empleado</a></li>
+                    <li class="active">Nuevo Empleado</li>
+                </ul> 
+            </div>
+            <!--TEXT MAINTENANCE-->
+            <div class="col-sm-12 col-md-12">
+                <h3 class="header-title"><i class="glyphicon glyphicon-saved"></i>Nuevo Empleado</h3>
+                <hr />
+            </div>
+        </div>
+
+        <!--FORM MAINTANCE-->
+        <div class="container" class="col-sm-12 col-md-12">
+            <!--FORM-->
+            <form class="row">  
+                <div class="borde col-sm-12 col-md-6 col-lg-6 form-horizontal"> 
+                                        <hr>
+                                        <!--NAME-->
+                                        <div class="form-group row">
+                                            <label for="nombre" class="control-label col-sm-2 col-md-2 col-lg-2">Nombres :</label>
+                                            <div class="col-sm-10 col-md-8 col-lg-10">
+                                                <input type="text" class="form-control" id="nombre" placeholder="Nombres">
+                                            </div>
+                                        </div>
+                                        <!--PATERNAL SURNAME-->
+                                        <div class="form-group row">
+                                            <label for="apPaterno" class="control-label col-sm-2 col-md-2 col-lg-2">Apellido Paterno :</label>
+                                            <div class="col-sm-10 col-md-8 col-lg-10">
+                                                <input type="text" class="form-control" id="apPaterno" placeholder="Apellido Paterno">
+                                            </div>
+                                        </div>
+                                        <!--MOTHER'S SURNAME-->
+                                        <div class="form-group row">
+                                            <label for="apMaterno" class="control-label col-sm-2 col-md-2 col-lg-2">Apellido Materno :</label>
+                                            <div class="col-sm-10 col-md-8 col-lg-10">
+                                                <input type="text" class="form-control" id="apMaterno" placeholder="Apellido Materno">
+                                            </div>
+                                        </div>
+                                        <!--DOCUMENT TYPE-->
+                                        <div class="form-group row ">
+                                            <label for="exampleSelect1" class="control-label col-sm-2 col-md-2 col-lg-2">Tipo Documento :</label>
+                                            <select class="form-control col-sm-8 col-md-4 col-lg-4 combo" id="exampleSelect1" >
+                                                <option value=""  class="form-control col-sm-8 col-md-4 col-lg-4">-- Seleccionar --</option>
+                                                <option value="1" class="form-control col-sm-8 col-md-4 col-lg-4">LIBRETA ELECTORAL O DNI</option>
+                                                <option value="4" class="form-control col-sm-8 col-md-4 col-lg-4">CARNET DE EXTRANJERIA</option>
+                                                <option value="6" class="form-control col-sm-8 col-md-4 col-lg-4">REG. UNICO DE CONTRIBUYENTES</option>
+                                                <option value="7" class="form-control col-sm-8 col-md-4 col-lg-4">PASAPORTE</option>
+                                                <option value="11" class="form-control col-sm-8 col-md-4 col-lg-4">PART. DE NACIMIENTO-IDENTIDAD</option>
+                                                <option value="00" class="form-control col-sm-8 col-md-4 col-lg-4">Otros</option>
+                                            </select>
+                                        </div>
+                                        <!--N° DOCUMENT-->
+                                        <div class="form-group row">
+                                            <label for="dni" class="control-label col-sm-2 col-md-2 col-lg-2">N° Documento :</label>
+                                            <div class="col-sm-10 col-md-8 col-lg-4">
+                                                <input type="number" class="form-control" id="dni" placeholder=" Example: 99999999">
+                                            </div>
+                                        </div>                                       
+                                        <!--DATE-->
+                                        <div class="form-group row">
+                                            <label for="example-date-input" class="control-label col-sm-2 col-md-2 col-lg-2">Fecha Nacimiento :</label>
+                                            <div class="col-sm-10 col-md-8 col-lg-4">
+                                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                            </div>
+                                        </div>
+                                        <!--STATE-->
+                                        <div class="form-group row ">
+                                            <label for="exampleSelect1" class="control-label col-sm-2 col-md-2 col-lg-2">Tipo Cargo :</label>
+                                            <select class="form-control col-sm-8 col-md-4 col-lg-4 combo" id="exampleSelect1" >
+                                                <option value=""  class="form-control col-sm-8 col-md-4 col-lg-4">-- Seleccionar --</option>
+                                                <option value="1" class="form-control col-sm-8 col-md-4 col-lg-4">ADMINISTRADOR</option>
+                                                <option value="4" class="form-control col-sm-8 col-md-4 col-lg-4">CONTADOR</option>
+                                                <option value="6" class="form-control col-sm-8 col-md-4 col-lg-4">MEDICO</option>
+                                                <option value="7" class="form-control col-sm-8 col-md-4 col-lg-4">ASISTENTE</option>
+                                                <option value="11" class="form-control col-sm-8 col-md-4 col-lg-4">LIMPIEZA</option>
+                                                <option value="00" class="form-control col-sm-8 col-md-4 col-lg-4">Otros</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <hr>
+                                                             
+                    </div>
+                    <!--IMAGEN-->
+                        <div class="borde col-sm-12 col-md-6 col-lg-6">
+                            <div class="row justify-content-center">
+                                <div class="form-group">
+                                <label for="example-date-input" class="col-form-label col-sm-12 col-md-12">Fotografía del Empleado</label>
+                                    <br>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                            <img src="../../img/diente.png" class="imagen" alt="imgDelEmpleado">
+                                        </div>
+                                    <br>
+                                </div>               
+                            </div>
+                            <div class="row borde justify-content-center">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <label for="exampleInputFile">File input:</label>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <input type="file" class="btn-success" id="exampleInputFile" aria-describedby="fileHelp"/>
+                                </div>
+                                <small id="fileHelp" class="form-text text-muted col-sm-12 col-md-12 col-lg-12">Solo para fines informátivos</small>
+                            </div>
+                        </div>
+                    <hr>
+                    <div class="w-100"></div>
+                <!--SUBMIT-->
+                    <div class="borde col">
+                        <div class="col-sm-12 col-md-3">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Crear Paciente" class="btn btn-primary" />
+                            </div>
+                        </div>  
+                    </div>
+            </form>     
+        </div>
+        <!--RETURN-->
+        <div class="borde container">
+            <div class="row col-sm-12 col-md-12">
+                <a href="index.html"><strong>Regresar</strong> </a>
+            </div>
+        </div>
+    </body>
+</html>

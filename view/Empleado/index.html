@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+      
+        
+        <!--link href="../../css/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" /-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>  
+        <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>            
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" /> 
+           
+        <!--link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css"-->
+
+        <style>
+            .borde1{border: 1px #000 solid; text-align: center}            
+            .borde{border: 1px #000fff solid;}
+            .borde2{border: 1px #295ba7 solid; text-align: center}
+            .action{  float: right;}
+
+        </style>
+    </head>
+    <!--CUERPO-->
+    <body>
+
+    <!--CONTAINER TITLE-->
+        <div class="container" id="MantenimientoPaciente">
+         <!--NOMBRE DE MANTENIMIENTO-->   
+                <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i> Mantenimiento del Empleado</h3>
+                <hr>
+            <div class="row">
+                    <!--BREADCRUMB-->
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <!--BREADCRUMB-->            
+                        <ul class="breadcrumb col-sm-12 col-md-12 col-lg-12">
+                            <li class="active">Mantenimiento</li>
+                        </ul> 
+                    </div>
+            </div>
+        </div>
+
+                <!--ACTIONS-->
+        <div class="container" id="actions">
+            <div class="row">
+                <!--TO EXPORT-->
+                <div class="col-sm-2 col-md-2 col-lg-2 action" id="toExport">
+                    <form action="" >
+                        <div class="btn-group" style="display:inline-block;">
+                            <button type="button" class="btn btn-primary col-sm-8 col-md-8 col-lg-8"><i class="glyphicon glyphicon-download-alt"></i> Exportar</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu col-sm-1 col-md-1 col-lg-1">
+                                <li><a href="#">Excel</a></li>
+                                @*<li role="separator" class="divider"></li>*@
+                                <li><a href="#">PDF</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+
+                <!--NEW PATIENT-->
+                <div class="col-sm-3 col-md-2 col-lg-2 action">
+                    <p>
+                        <a class="btn btn-success" href="create.html">
+                        <i class="glyphicon glyphicon-plus"></i> 
+                            Nuevo Empleado
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <!--TABLE-->
+    <div class="container">
+            <!--MAINTENANCE TABLE-->
+            <br/>
+
+            <div class="table table-responsive">
+
+                <table id="tbl-empleado" class="table table-bordered table-striped table-hover borde1">
+                        <!--TABLE HEAD-->
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr >
+                                <th>
+                                    Nombres
+                                </th>
+                                <th>
+                                    Ape. Paterno
+                                </th>
+                                <th>
+                                    Ape. Materno
+                                </th>
+                                <th>
+                                    Tipo Documento
+                                </th>
+                                <th>
+                                    Dni
+                                </th>
+                                <th>
+                                    Cargo
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <!--TABLE BODY-->
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        Roy Brayan
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        ADMINISTRADOR
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a href="index.html"><strong>Editar</strong> </a>/
+                                        <a href="index.html"><strong>Detalle</strong> </a>/
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr> 
+		    		            <tr>
+                                    <td>
+                                        Raul
+                                    </td>
+                                    <td>
+                                        felix
+                                    </td>
+                                    <td>
+                                        Trinidad
+                                    </td>
+                                    <td>
+                                        DNI
+                                    </td>
+                                    <td>
+                                        71842016
+                                    </td>
+                                    <td>
+                                        ADMINISTRADOR
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a href="index.html"><strong>Editar</strong> </a>/
+                                        <a href="index.html"><strong>Detalle</strong> </a>/
+                                        <a href="index.html"><strong>Eliminar</strong> </a>
+                                    </td>
+                                </tr> 
+                        </tbody>
+                    </table>
+            </div>
+    </div>
+
+
+        <script>
+
+            $(document).ready(function () 
+            {
+                $('#tbl-empleado').dataTable({
+                    "aoColumns": [
+                            { "sName": "Nombre", "mData": "Nombre" },
+                            { "sName": "Ape. Paterno", "mData": "Ape. Paterno" },
+                            { "sName": "Ape. Materno", "mData": "Ape. Materno" },
+                            { "sName": "Tipo Documento", "mData": "Tipo Documento" },
+                            { "sName": "Dni", "mData": "Dni" },
+                            { "sName": "Cargo", "mData": "Cargo" },
+                            { "sName": "Acciones", "mData": "Acciones" }
+                    ],
+
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo  ",
+                            next: "  Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+                    }
+                });
+
+                var id;
+                $("body").on("click", ".deleteItem", function (e) {
+                    id = $(this).data('id');
+
+                    var html = "¿Estás seguro de eliminar la marca de <b>" + $(this).data('content') + "</b>?";
+                    $("#body-delete").html(html);
+                });
+
+                $('#btnContinueDelete').click(function () {
+                    window.location = "/Marca/Delete/" + id;
+                });
+
+
+            });
+
+        </script>
+
+
+    </body>
+</html>
